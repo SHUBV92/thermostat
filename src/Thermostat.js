@@ -1,7 +1,7 @@
 function Thermostat(powerSavingMode = true) {
-  this._temperature = 20;  
   this._minTemperature = 10;
-  this._maxTemp = 0
+  this._temperature = 20;  
+  this._maxTemp = 25
   this._powerSavingMode = powerSavingMode; 
   this._energyUsage = "medium usage"
 }
@@ -16,7 +16,7 @@ Thermostat.prototype.up = function() {
 
 Thermostat.prototype.down = function() {
   if (this._temperature <= this._minTemperature ) throw ("Minimum temperature reached");
-  this._temperature--;
+  this._temperature --;
 }
 
 Thermostat.prototype.powerSavingMode = function() { 
