@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <h1>Thermostat</h1>
+    <h1 id="thermostat">Thermostat</h1>
 </head>
 
 <body bgcolor="plum">
 <section>
 
 <p>
-<h2>Temperature</h2>
+<h2 id="temp">Temperature</h2>
 
-<input type ="button" id ="temperature-up" value="-">
-<input type ="button" id ="temperature-down" value="+">
-<input type ="button" id ="temperature-Reset" value="Reset">
+<input type ="button" id ="temperature-up" value="+">
+<input type ="button" id ="temperature-down" value="-">
+<input type ="button" id ="temperature-reset" value="Reset">
 
 
 
 <h2>Power Saving Mode</h2>
-<input type ="button" id ="PowerSavingMode On " value="On">
-<input type ="button" id ="PowerSavingMode Off " value="Off">
+<input type ="button" id ="powersave-on" value="On">
+<input type ="button" id ="powersave-off" value="Off">
 
 
 
@@ -27,10 +27,10 @@
 
 </p>
     </section>
-
-    <script src="js/Thermostat.js"></script>
+    <a href="http://jquery.com/">jQuery</a>
+    <script src="jquery.js"></script>
+    <script src="interface.js"></script>
+    <script src="src/Thermostat.js"></script>
 </body>
 
 </html>
-
-
