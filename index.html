@@ -1,43 +1,124 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <h1 id="thermostat">Thermostat</h1>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="thermostat.css" rel="stylesheet">
 </head>
 
-<body bgcolor="plum">
- <section>
-    <h1>Current temperature: <span id="current-temperature"></span></h1>
-    <!-- <form id="select-city">
+
+<body bgcolor="gray" >
+
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="https://www.spotify.com/uk/">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
+                </div>
+              </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ------------------------ -->
+<div>
+
+<h1 id="thermostat" style="color:purple ">Thermostat </h1>
+
+<section>
+    <h1>Current temperature: <span id='current-temperature' style="color:blue"></span></h1>
+    <form id="select-city">
         <input id="current-city" type="text" placeholder="Enter a city"></input>
         <input type="submit"></input>
-    </form> -->
-    <select id="current-city"> 
+    </form> 
+    <!-- <select id="current-city"> 
             <option value="london">London</option>
-            <option value="newyork">New York</option>
+            <option value="new york">New York</option>
             <option value="paris">Paris</option>
             <option value="tokyo">Tokyo</option>
-    </select>    
+    </select>     -->
 <p>
+      
+</section>              
+
+
+
+<section>
+        
 <h2 id="temp">Temperature</h2>
 
-<input type ="button" id ="temperature-up" value="+">
-<input type ="button" id ="temperature-down" value="-">
-<input type ="button" id ="temperature-reset" value="Reset">
+    <input type ="button" id ="temperature-up" value="+" class ="btn btn-primary">
+    <input type ="button" id ="temperature-down" value="-" class ="btn btn-primary">
+    <input type ="button" id ="temperature-reset" value="Reset" class ="btn btn-primary">
 
 <h2 id="powerSavingMode">PowerSavingMode</h2>
-<input type ="button" id ="powersave-on" value="On">
-<input type ="button" id ="powersave-off" value="Off">
-
+    <input type ="button" id ="powersave-on" value="On" class ="btn btn-primary">
+    <input type ="button" id ="powersave-off" value="Off" class ="btn btn-primary">
 
 <h2 id="energy">Energy usage</h2>
-<input type ="button" id ="Energy-high" value="High">
+    <input type ="button" id ="Energy-high" value="Energy" class ="btn btn-danger">
 
 </p>
-    </section>
-    <a href="http://jquery.com/">jQuery</a>
+
+</div>
+
+    
+
+
+</section>
+    <!-- <a href="http://jquery.com/">jQuery</a> -->
     <script src="jquery.js"></script>
     <script src="interface.js"></script>
     <script src="src/Thermostat.js"></script>
+
 </body>
 
 </html>
+
