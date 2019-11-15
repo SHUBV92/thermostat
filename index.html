@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <h1 id="thermostat">Thermostat</h1>
+    <head>
+        <h1 id="thermostat">Thermostat</h1>
 </head>
 
 <body bgcolor="plum">
-<section>
-
+ <section>
+    <h1>Current temperature: <span id="current-temperature"></span></h1>
+    <!-- <form id="select-city">
+        <input id="current-city" type="text" placeholder="Enter a city"></input>
+        <input type="submit"></input>
+    </form> -->
+    <select id="current-city"> 
+            <option value="london">London</option>
+            <option value="newyork">New York</option>
+            <option value="paris">Paris</option>
+            <option value="tokyo">Tokyo</option>
+    </select>    
 <p>
 <h2 id="temp">Temperature</h2>
 
@@ -14,16 +24,13 @@
 <input type ="button" id ="temperature-down" value="-">
 <input type ="button" id ="temperature-reset" value="Reset">
 
-
-
-<h2>Power Saving Mode</h2>
+<h2 id="powerSavingMode">PowerSavingMode</h2>
 <input type ="button" id ="powersave-on" value="On">
 <input type ="button" id ="powersave-off" value="Off">
 
 
-
-
-<h2>Energy usage</h2>
+<h2 id="energy">Energy usage</h2>
+<input type ="button" id ="Energy-high" value="High">
 
 </p>
     </section>

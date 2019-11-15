@@ -30,6 +30,18 @@ describe('Thermostat', function() {
       thermostat._temperature = 10
       expect(function() { thermostat.down() }).toThrow("Minimum temperature reached")
     });
+
+    it('Throw error once maximum temperature has reached', function (){
+      thermostat._powerSavingMode = true
+      thermostat._temperature = 25
+      expect(function() { thermostat.up() }).toThrow("Maximum temperature reached")
+    });
+
+    it('Throw error once maximum temperature has reached', function (){
+      thermostat._powerSavingMode = false
+      thermostat._temperature = 32
+      expect(function() { thermostat.up() }).toThrow("Maximum temperature reached")
+    });
   
     it("Reset the temperature to 20 with a reset function", function(){
       thermostat._temperature = 11
@@ -46,15 +58,25 @@ describe('Thermostat', function() {
 
     it('Power Saving mode is on then max temperature is 25', function() {
       thermostat._powerSavingMode = true 
-      thermostat.powerSavingMode()
+      thermostat.up()
       expect(thermostat._maxTemp).toEqual(25)
     });
 
     it('Power Saving mode is off then max temperature is 32', function() {
       thermostat._powerSavingMode = false
-      thermostat.powerSavingMode()
+      thermostat.up()
       expect(thermostat._maxTemp).toEqual(32)
     });
+
+    it('Power Saving mode is on', function(){
+      thermostat.powerSavingModeOn()
+      expect(thermostat._powerSavingMode).toEqual(true)
+    })
+
+    it('Power Saving mode is off', function(){
+      thermostat.powerSavingModeOff()
+      expect(thermostat._powerSavingMode).toEqual(false)
+    })
 
     
   });
